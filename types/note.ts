@@ -1,6 +1,6 @@
 // types/note.ts
 
-export type NoteTag = "Work" | "Personal" | "Shopping" | "Todo";
+export type NoteTag = "Work" | "Personal" | "Shopping" | "Todo" | "Meeting";
 
 export interface Note {
   id: string;
@@ -9,17 +9,6 @@ export interface Note {
   tag: NoteTag;
   createdAt: string;
   updatedAt: string; // ← додали
-}
-
-export interface FetchNotesParams {
-  page?: number;
-  perPage?: number;
-  search?: string;
-}
-
-export interface FetchNotesResponse {
-  notes: Note[];
-  totalPages: number;
 }
 
 export interface CreateNotePayload {
